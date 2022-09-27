@@ -1,0 +1,8 @@
+.swiper {
+  &-button {
+    &-next,
+    &-prev {
+      @apply hidden;
+    }
+  }
+}

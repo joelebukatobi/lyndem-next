@@ -1,0 +1,47 @@
+h1 {
+  @apply text-[5rem] font-semibold;
+}
+
+h2 {
+  @apply text-[3.7rem] font-semibold;
+}
+
+p {
+  @apply text-[1.8rem] font-semibold;
+}
+
+h3 {
+  @apply text-[2.8rem] font-semibold;
+}
+
+h4 {
+  @apply text-[2.1rem] font-semibold;
+}
+
+h5 {
+  @apply text-[1.4rem] font-medium;
+}
+
+h6 {
+  @apply text-[1.2rem] font-medium;
+}
+
+input {
+  @apply text-[1.6rem] font-semibold placeholder:font-normal;
+}
+
+textarea {
+  @apply text-[1.6rem] font-semibold placeholder:font-normal;
+}
+
+label {
+  @apply text-[1.4rem] font-normal;
+}
+
+th {
+  @apply text-[1.6rem] font-bold text-black/50;
+}
+
+td {
+  @apply text-[1.6rem] font-medium;
+}
