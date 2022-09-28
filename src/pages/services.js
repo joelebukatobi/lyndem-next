@@ -4,7 +4,7 @@ import Section from '@/components/Section';
 
 export default function about() {
   return (
-    <Layout title={'Services '}>
+    <Layout title={'Services'} link={'Services '}>
       {/* About Us */}
       <Section>
         <div className="md:hidden w-full flex flex-col items-center">

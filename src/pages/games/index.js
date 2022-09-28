@@ -1,10 +1,15 @@
+// Config
+import { API_URL } from '@/config/index';
+
 // Components
 import Layout from '@/components/layout/Layout';
 import Section from '@/components/Section';
+import Link from 'next/link';
 
-export default function about() {
+export default function about({ games }) {
+  console.log(games.data);
   return (
-    <Layout title={'Games '}>
+    <Layout title={'Games'} link={'Games'}>
       <div className="my-[10.4rem]">
         <p className="font-Nunito text-justify ">
           Lyndem Educational Games Cafe is a child-centred Cafe that engenders learning through the art of play. It is
@@ -36,44 +41,37 @@ export default function about() {
           <hr className="w-[8%] bg-[#ff6300]" />
         </div>
         <div className="flex flex-col md:flex-row gap-x-[4rem] ">
-          <div className="card">
-            <div className="bg-black/50 h-[32rem]"></div>
-            <div className="p-[1.6rem]">
-              <h3 className="font-BenchNine">Word Jumble</h3>
-              <hr className="bg-[#ff6300] mt-[.8rem] mb-[1.6rem]" />
-              <p>
-                The Educational Games Cafe afford kids the opportunity to interact with board, card, and electronic
-                educational games and also like minded peers.
-              </p>
-            </div>
-          </div>
-
-          {/* <div className="card">
-            <div className="bg-black/50 h-[32rem]"></div>
-            <div className="p-[1.6rem]">
-              <h4>Game Schooling</h4>
-              <hr className="bg-[#ff6300] mt-[.8rem] mb-[1.6rem]" />
-              <p>
-                One of our services on offer is Game Schooling which simply put is the incorporation of games into
-                school lessons. At Lyndem we're open to partnering with schools and organizations
-              </p>
-            </div>
-          </div>
-
-          <div className="card">
-            <div className="bg-black/50 h-[32rem]"></div>
-            <div className="p-[1.6rem]">
-              <h4>Play Dates</h4>
-              <hr className="bg-[#ff6300] mt-[.8rem] mb-[1.6rem]" />
-              <p>
-                Play Dates are fun interaction opportunities where kids socialize with one another over educational
-                games and these can be customized to fit the clients needs e.g. birthdays, kid parties or school
-                funfairs.
-              </p>
-            </div>
-          </div> */}
+          {games.data.map((game) => {
+            return (
+              <Link href="/games/wordjumble">
+                <div className="card cursor-pointer" key={game.id}>
+                  <div className="bg-black/50 h-[32rem]"></div>
+                  <div className="p-[1.6rem]">
+                    <h3 className="font-BenchNine">{game.name}</h3>
+                    <hr className="bg-[#ff6300] mt-[.8rem] mb-[1.6rem]" />
+                    <p>{game.description}</p>
+                    <p className="text-[#0202cb]">
+                      <Link href="/games/wordjumble">View</Link>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await Promise.all([fetch(`${API_URL}/api/v1/games`), fetch(`${API_URL}/api/v1/questions`)]);
+
+  const info = await Promise.all(res.map((res) => res.json()));
+
+  return {
+    props: {
+      games: info[0],
+    },
+  };
 }

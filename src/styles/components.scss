@@ -47,7 +47,7 @@ table {
 }
 
 .navbar {
-  @apply h-[8rem] flex items-center justify-between;
+  @apply h-[8rem] md:h-[10.4rem] flex items-center justify-between;
 
   &__logo {
     @apply cursor-pointer w-[8rem] h-[8rem];
@@ -74,6 +74,13 @@ table {
   }
 }
 
+.header {
+  &__image {
+    &::after {
+      @apply h-[100%] w-[100%] absolute top-0 left-0  bg-[#010001]/70 z-10 content-[''];
+    }
+  }
+}
 .footer {
   @apply bg-[#45024c] py-[8rem];
   & h4 {
@@ -121,7 +128,7 @@ table {
 
 .section {
   & > * {
-    width: 100%;
+    @apply w-[100%] md:w-1/2;
   }
 }
 

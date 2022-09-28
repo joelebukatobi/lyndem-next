@@ -4,9 +4,9 @@ import Section from '@/components/Section';
 
 export default function about() {
   return (
-    <Layout title={'About '}>
+    <Layout title={'About '} link={'About'}>
       <div className="my-[10.4rem]">
-        <header className="">
+        <header>
           <h2 className="font-BenchNine">About Us</h2>
           <hr className=" bg-[#ff6300]" />
         </header>

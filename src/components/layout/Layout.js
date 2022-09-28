@@ -11,12 +11,12 @@ import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
 import Header from '@/components/Header';
 
-export default function Layout({ children, title, description, keywords }) {
+export default function Layout({ children, link, title, image, description, keywords }) {
   const router = useRouter();
   return (
     <>
       <Head>
-        <title>{title}Lyndem Edutainment</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -29,7 +29,7 @@ export default function Layout({ children, title, description, keywords }) {
       <Navbar />
       {router.pathname === '/' && <Hero />}
       {(router.pathname === '/about' || router.pathname === '/services' || router.pathname === '/games') && (
-        <Header title={title} />
+        <Header title={title} image={image} link={link} />
       )}
       <Container>{children}</Container>
 
@@ -41,6 +41,7 @@ export default function Layout({ children, title, description, keywords }) {
 }
 
 Layout.defaultProps = {
+  title: 'Lyndem Edutainment',
   description:
     'Tailor-made technological solutions, creative expressions, and flawless executions. Let’s disrupt the norm, together.',
   keywords:

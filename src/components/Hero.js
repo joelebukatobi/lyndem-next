@@ -4,7 +4,7 @@ import Container from '@/components/Container';
 export default function Hero() {
   return (
     <>
-      <header className="relative">
+      <header className="relative mt-[1.6rem]">
         <div className="bg-black/50 w-full h-[64rem]"></div>
         <Container>
           <figcaption className="absolute left-[5%] md:left-[unset] bottom-[9.6rem]  w-[90%] md:w-[30%] bg-white p-[2.4rem] rounded-[1rem]">
