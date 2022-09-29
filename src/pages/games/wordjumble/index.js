@@ -1,10 +1,12 @@
+// Next JS
+import Link from 'next/link';
+
 // Config
 import { API_URL } from '@/config/index';
 
 // Components
 import Layout from '@/components/layout/Layout';
 import Section from '@/components/Section';
-import Link from 'next/link';
 import Header from '@/components/Header';
 
 // External Libraries
@@ -134,7 +136,9 @@ export default function about({ games }) {
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">Answer Sheet</h4>
+              <h4 class="font-BenchNine">
+                <Link href="/games/wordjumble/answersheet">Answer Sheet</Link>
+              </h4>
             </div>
           </div>
         </div>
