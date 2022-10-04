@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login user
   const login = async ({ email, password }) => {
-    const res = await fetch(`${WEB_URL}/api/login`, {
+    const res = await fetch(`/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
 
   // Logout user
   const logout = async () => {
-    const res = await fetch(`${WEB_URL}/api/logout`, {
+    const res = await fetch(`/api/logout`, {
       method: 'POST',
     });
 
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
 
   // Check if user is logged in
   const checkUserLoggedIn = async (user) => {
-    const res = await fetch(`${WEB_URL}/api/user`);
+    const res = await fetch(`/api/user`);
     const data = await res.json();
 
     if (res.ok) {
