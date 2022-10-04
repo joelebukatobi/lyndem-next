@@ -7,7 +7,7 @@ import Section from '@/components/Section';
 import Link from 'next/link';
 
 export default function about({ games }) {
-  console.log(games.data);
+  // const
   return (
     <Layout title={'Games'} link={'Games'}>
       <div className="my-[10.4rem]">
@@ -51,7 +51,7 @@ export default function about({ games }) {
                     <hr className="bg-[#ff6300] mt-[.8rem] mb-[1.6rem]" />
                     <p>{game.description}</p>
                     <p className="text-[#0202cb]">
-                      <Link href="/games/wordjumble">View</Link>
+                      <Link href={`/games/${game.slug}`}>View</Link>
                     </p>
                   </div>
                 </div>

@@ -11,10 +11,10 @@ import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
 import Header from '@/components/Header';
 
-export default function Layout({ children, link, title, image, description, keywords }) {
+export default function Layout({ children, link, title, image, description, keywords, className }) {
   const router = useRouter();
   return (
-    <>
+    <div className={className}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -36,7 +36,7 @@ export default function Layout({ children, link, title, image, description, keyw
       {router.pathname === '/' && <Video />}
       {router.pathname === '/' && <Gallery />}
       <Footer />
-    </>
+    </div>
   );
 }
 

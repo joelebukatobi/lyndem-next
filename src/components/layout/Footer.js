@@ -76,10 +76,10 @@ export default function Footer() {
 
           <hr className="mt-[4rem]" />
           <div className="text-center md:text-left mt-[4.8rem] mt:mb-[0]">
-            <p class="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+            <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
               <span className="text-[#ff6300]">© </span>Lyndem Edutainment. All Rights Reserved
             </p>
-            <p class="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+            <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
               Designed and Developed by JetDev
             </p>
           </div>

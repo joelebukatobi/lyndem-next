@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-  // console.log(error);
+  console.log(WEB_URL);
 
   const router = useRouter();
 

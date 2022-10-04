@@ -1,13 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    // colors: {
-    //   white: '#ffffff',
-    //   black: '#191919',
-    // },
     fontFamily: {
       Nunito: ['Nunito', 'sans-serif'],
       BenchNine: ['BenchNine', 'sans-serif'],
+      Domine: ['Domine', 'serif'],
       Inter: ['Inter', 'san-serif'],
     },
     screens: {

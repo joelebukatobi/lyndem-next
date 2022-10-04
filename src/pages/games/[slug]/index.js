@@ -1,5 +1,6 @@
 // Next JS
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // Config
 import { API_URL } from '@/config/index';
@@ -13,8 +14,9 @@ import Header from '@/components/Header';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-export default function about({ games }) {
-  console.log(games.data);
+export default function about() {
+  const router = useRouter();
+  const slug = router.query.slug;
   return (
     <Layout title={'Games'}>
       <Header title={'Word Jumble'} link={'Games'} image={'/images/wordjumble-header.jpeg'} />
@@ -119,25 +121,25 @@ export default function about({ games }) {
           </p>
           <div className="w-full flex mt-[2.4rem] gap-x-[2.4rem]">
             <div className="flex items-center w-1/2 justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
-              <div class="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
+              <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">
+              <h4 className="font-BenchNine">
                 <a href="/documents/wordjumble-answer-sheet.pdf" target="_blank">
                   Rule Sheet
                 </a>
               </h4>
             </div>
             <div className="flex items-center w-1/2 justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
-              <div class="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
+              <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">
-                <Link href="/games/wordjumble/answersheet">Answer Sheet</Link>
+              <h4 className="font-BenchNine">
+                <Link href={`/games/${slug}/answersheet`}>Answer Sheet</Link>
               </h4>
             </div>
           </div>
@@ -147,14 +149,13 @@ export default function about({ games }) {
   );
 }
 
-export async function getServerSideProps() {
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/games`), fetch(`${API_URL}/api/v1/questions`)]);
-
-  const info = await Promise.all(res.map((res) => res.json()));
-
-  return {
-    props: {
-      games: info[0],
-    },
-  };
-}
+// export async function getServerSideProps() {
+// const res = await Promise.all([fetch(`${API_URL}/api/v1/games/${slug}`), fetch(`${API_URL}/api/v1/questions`)]);
+// const info = await Promise.all(res.map((res) => res.json()));
+// console.log(info[0]);
+// return {
+//   props: {
+//     games: info[0],
+//   },
+// };
+// }

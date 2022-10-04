@@ -53,28 +53,28 @@ export default function about() {
           </p>
           <div className="flex flex-wrap mt-[2.4rem] gap-x-[2.4rem]">
             <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
-              <div class="flex items-center justify-center h-[4rem] w-[4rem] bg-[#ff6300] rounded-[100%]">
+              <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#ff6300] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">EduGaming Cafe</h4>
+              <h4 className="font-BenchNine">EduGaming Cafe</h4>
             </div>
             <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
-              <div class="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
+              <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">Game Schooling (School Visits)</h4>
+              <h4 className="font-BenchNine">Game Schooling (School Visits)</h4>
             </div>
             <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
-              <div class="flex items-center justify-center h-[4rem] w-[4rem] bg-[#b806cc] rounded-[100%]">
+              <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#b806cc] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/images/sprite.svg#icon-check" />
                 </svg>
               </div>
-              <h4 class="font-BenchNine">Play Dates</h4>
+              <h4 className="font-BenchNine">Play Dates</h4>
             </div>
           </div>
         </div>
