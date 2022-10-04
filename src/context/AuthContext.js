@@ -22,17 +22,18 @@ export const AuthProvider = ({ children }) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify(user),
     });
 
     console.log(res);
     if (res.ok) {
-      setUser(data.user);
-      router.push('/');
+      setUser(data);
+      router.push('/admin');
     } else {
-      setError(data.message);
-      setError(null);
+      setError(data);
+      // setError(null);
     }
   };
 
@@ -42,6 +43,7 @@ export const AuthProvider = ({ children }) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         email,
