@@ -25,7 +25,7 @@ export default function about() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/api/v1/questions/search/${term}`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/questions/search/${term}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export default function about() {
   };
 
   const getQuestion = async (id) => {
-    const res = await fetch(`${API_URL}/api/v1/questions/${id}`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/questions/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

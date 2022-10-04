@@ -39,7 +39,7 @@ export default function List({ token, game }) {
   const submitCreateQuestion = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/api/v1/games/${game.id}/questions`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/games/${game.id}/questions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function List({ token, game }) {
   //
   const handleDelete = async (id) => {
     if (confirm('Are you sure?')) {
-      const res = await fetch(`${API_URL}/api/v1/questions/${questionID}`, {
+      const res = await fetch(`${API_URL}/backend/api/v1/questions/${questionID}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ export default function List({ token, game }) {
   const submitEditQuestion = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/api/v1/questions/${questionID}`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/questions/${questionID}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -373,7 +373,7 @@ export async function getServerSideProps({ req, query: { id } }) {
       },
     };
   }
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/games/${id}`)]);
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/games/${id}`)]);
   const info = await Promise.all(res.map((res) => res.json()));
 
   return {

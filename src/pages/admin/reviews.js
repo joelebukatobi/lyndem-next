@@ -23,7 +23,7 @@ export async function getServerSideProps({ req }) {
       },
     };
   }
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/reviews`)]);
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/reviews`)]);
   const info = await Promise.all(res.map((res) => res.json()));
 
   return {

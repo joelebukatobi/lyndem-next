@@ -30,7 +30,7 @@ export async function getServerSideProps({ req }) {
       },
     };
   }
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/games`)]);
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/games`)]);
   const info = await Promise.all(res.map((res) => res.json()));
 
   return {

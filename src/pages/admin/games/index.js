@@ -35,7 +35,7 @@ export default function Games({ token, games }) {
   const submitCreateGame = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/api/v1/games`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/games`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export default function Games({ token, games }) {
   //
   const handleDelete = async (id) => {
     if (confirm('Are you sure?')) {
-      const res = await fetch(`${API_URL}/api/v1/games/${id}`, {
+      const res = await fetch(`${API_URL}/backend/api/v1/games/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ export default function Games({ token, games }) {
   const submitEditGame = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/api/v1/games/${gameID}`, {
+    const res = await fetch(`${API_URL}/backend/api/v1/games/${gameID}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -296,7 +296,7 @@ export async function getServerSideProps({ req }) {
       },
     };
   }
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/games`)]);
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/games`)]);
   const info = await Promise.all(res.map((res) => res.json()));
 
   return {

@@ -5,7 +5,7 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     const { email, password } = req.body;
 
-    const apiRes = await fetch(`${API_URL}/api/v1/auth/login`, {
+    const apiRes = await fetch(`${API_URL}/backend/api/v1/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

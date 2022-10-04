@@ -65,7 +65,10 @@ export default function about({ games }) {
 }
 
 export async function getServerSideProps() {
-  const res = await Promise.all([fetch(`${API_URL}/api/v1/games`), fetch(`${API_URL}/api/v1/questions`)]);
+  const res = await Promise.all([
+    fetch(`${API_URL}/backend/api/v1/games`),
+    fetch(`${API_URL}/backend/api/v1/questions`),
+  ]);
 
   const info = await Promise.all(res.map((res) => res.json()));
 
