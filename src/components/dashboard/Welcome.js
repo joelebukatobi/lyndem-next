@@ -1,10 +1,18 @@
+// React JS
+import { useContext } from 'react';
+
+// Next JS
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
+// Context
+import AuthContext from '@/context/AuthContext';
 export default function Welcome({ className }) {
   const pathname = useRouter().pathname;
+  const { user } = useContext(AuthContext);
   return (
     <div className={`h-[12rem] bg-white rounded-[1rem] px-[2.4rem] flex flex-col justify-center ${className}`}>
-      <h2>Good Afternoon Bassey,👋🏽</h2>
+      {user && <h2>Good Afternoon, {user.name.substring(0, user.name.indexOf(' '))} 👋🏽</h2>}
       {pathname === '/admin' && (
         <h5>
           Welcome to your{' '}
@@ -37,6 +45,8 @@ export default function Welcome({ className }) {
           </Link>
         </h5>
       )}
+
+      {pathname === '/admin/profile' && <h5>Welcome to your profile</h5>}
     </div>
   );
 }

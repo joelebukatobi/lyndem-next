@@ -1,13 +1,22 @@
-import { useContext } from 'react';
+// React JS
+import { useContext, useEffect } from 'react';
+
+// Next JS
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+
+// Components
 import Input from '@/components/elements/Input';
 import Button from '@/components/elements/Button';
+
+// Context
 import AuthContext from '@/context/AuthContext';
 
 export default function Sidebar({ className }) {
   const pathname = useRouter().pathname;
-  const { logout } = useContext(AuthContext);
+  const { logout, user } = useContext(AuthContext);
+
+  console.log(user);
   return (
     <div className={`sidebar w-1/4 relative bg-black h-[100vh] text-white px-[6rem] py-[4rem] ${className}`}>
       {/* <div className="border-2 border-white h-full"> */}
@@ -228,15 +237,34 @@ export default function Sidebar({ className }) {
           </p>
         </div>
         <hr className="w-full mb-[1.6rem]" />
-        <div className="flex items-center">
-          <figcaption className="bg-white h-[5.6rem] w-[5.6rem] rounded-[100%] mr-[1.6rem]"></figcaption>
-          <footer className="space-y-[.4rem]">
-            <p>Bassey Onwuanaku</p>
-            <h6>Administrator</h6>
-          </footer>
-        </div>
+        <Link href="/admin/profile">
+          <div className="flex items-center cursor-pointer">
+            <figcaption className="bg-white h-[5.6rem] w-[5.6rem] rounded-[100%] mr-[1.6rem]"></figcaption>
+            {user && (
+              <footer className="space-y-[.4rem]">
+                <p className="capitalize">{user.name}</p>
+                <h6 className="capitalize">{user.role}</h6>
+              </footer>
+            )}
+          </div>
+        </Link>
       </div>
       {/* </div> */}
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const { user } = useContext(AuthContext);
+  console.log(user);
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/users/${user.data._id}`)]);
+
+  const info = await Promise.all(res.map((res) => res.json()));
+  console.log(info[0]);
+  return {
+    props: {
+      token,
+      person: info[0],
+    },
+  };
 }

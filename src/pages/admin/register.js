@@ -1,30 +1,48 @@
+// React
 import { useState, useEffect, useContext } from 'react';
+
+// Next JS
+import Link from 'next/link';
+
+// Components
 import AuthContext from '@/context/AuthContext';
 import Button from '@/components/elements/Button';
 import Input from '@/components/elements/Input';
 import Label from '@/components/elements/Label';
-import Link from 'next/link';
+import Select from '@/components/elements/Select';
+
+// External Libraries
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [role, setRole] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const { login, error } = useContext(AuthContext);
-  // console.log(error);
+  const { register, error } = useContext(AuthContext);
+
+  const options = [
+    { value: 'editor', label: 'editor' },
+    { value: 'user', label: 'user' },
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (error !== null) {
-      setErrorMsg(error.message);
+      toast.error(`${errorMsg}`);
+    } else {
+      toast.success('Your account has been created');
     }
-
-    login({ email, password });
+    register({ email, password, role, name });
   };
 
   return (
     <div className="h-[100vh] w-[100vw] bg-black flex items-center justify-center text-white">
+      <ToastContainer />
       <div className="w-1/4">
         <header className="flex flex-col items-center mb-[2.4rem]">
           <svg className="h-[16rem] w-[16rem]" viewBox="0 0 370 243" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -108,20 +126,31 @@ export default function Register() {
             />
             <path fillRule="evenodd" clipRule="evenodd" d="M0 140.515H369.136V139.422H0V140.515Z" fill="" />
           </svg>
-
-          {/* <h2 className="">Admin Dashboard</h2> */}
-          <h6 className="w-full mt-[2.4rem]">
-            Please enter your email and password to access the administrator dashboard or request login credentials
-            <span className="text-white/50 italic">
-              <Link href="/"> here</Link>
-            </span>
-          </h6>
-          {/* {error &&
-            error.message(<h5 className={errorMsg ? 'block text-red-600 w-full mt-[2.4rem]' : 'hidden'}>errorMsg</h5>)} */}
+          <h5 className="w-full mt-[1.6rem]">
+            Please fill in the required details below to register an account. Click{' '}
+            <strong className="text-green-400">
+              <Link href="/admin/login">here </Link>{' '}
+            </strong>
+            to sign in, if you already have an account.
+          </h5>
           <h5 className={errorMsg ? 'block text-red-600 w-full mt-[2.4rem]' : 'hidden'}>{errorMsg}</h5>
         </header>
         <form onSubmit={handleSubmit} className="">
-          <div className="flex flex-col mb-8">
+          <div className="flex flex-col mb-[2.4rem]">
+            <Label htmlFor={'name'} className={'text-white'}>
+              Name <span className="text-red-600">*</span>
+            </Label>
+            <Input
+              type={'name'}
+              id={'name'}
+              placeholder={'John Doe'}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className={'bg-white/10 focus:bg-white'}
+              required
+            />
+          </div>
+          <div className="flex flex-col mb-[2.4rem]">
             <Label htmlFor={'email'} className={'text-white'}>
               Email Address <span className="text-red-600">*</span>
             </Label>
@@ -132,20 +161,28 @@ export default function Register() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={'bg-white/10 focus:bg-white'}
+              required
             />
           </div>
-          <div className="flex flex-col mb-[4rem]">
+          <div className="flex flex-col mb-[2.4rem]">
             <Label htmlFor={password} className={'text-white'}>
               Password <span className="text-red-600">*</span>
             </Label>
             <Input
               type={'password'}
               id={'password'}
-              placeholder={'password'}
+              placeholder={'Password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={'bg-white/10 focus:bg-white'}
+              required
             />
+          </div>
+          <div className="flex flex-col mb-[4rem]">
+            <Label className={'text-white'}>
+              Role <span className="text-red-600">*</span>
+            </Label>
+            <Select placeHolder="Select..." options={options} onChange={(value) => setRole(value.value)} />
           </div>
           <Button className={'bg-white text-black w-full mb-[1.6rem]'}>Login</Button>
           {/* <h5>Forgot Password?</h5> */}

@@ -1,24 +1,26 @@
+// Config
 import cookie from 'cookie';
 import { API_URL } from '@/config/index';
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    const { username, email, password } = req.body;
+    const { name, email, password, role } = req.body;
 
-    const apiRes = await fetch(`${API_URL}/backend/auth/local/register`, {
+    const apiRes = await fetch(`${API_URL}/backend/api/v1/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username,
+        name,
         email,
         password,
+        role,
       }),
     });
 
     const data = await apiRes.json();
-
+    console.log(data);
     if (apiRes.ok) {
       // Set Cookie
       res.setHeader(
