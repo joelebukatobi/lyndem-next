@@ -26,19 +26,19 @@ export default function about() {
           <ul>
             <li>
               <svg className="h-[1.6rem] w-[1.6rem]">
-                <use href="/images/sprite.svg#icon-phone" />
+                <use href="/assets/svg/sprite.svg#icon-phone" />
               </svg>
               08025182324
             </li>
             <li>
               <svg className="h-[1.6rem] w-[1.6rem]">
-                <use href="/images/sprite.svg#icon-phone" />
+                <use href="/assets/svg/sprite.svg#icon-phone" />
               </svg>
               08094931619
             </li>
             <li>
               <svg className="h-[1.6rem] w-[1.6rem]">
-                <use href="/images/sprite.svg#icon-phone" />
+                <use href="/assets/svg/sprite.svg#icon-phone" />
               </svg>
               lyndemedutainment@gmail.com
             </li>
@@ -47,7 +47,7 @@ export default function about() {
         <form action="" className="relative md:w-1/2 flex flex-col space-y-[3.2rem]">
           <div className="absolute z-[-1] top-[-8rem] right-0 w-full h-full opacity-30">
             <svg className="w-full h-full">
-              <use href="/images/sprite.svg#contact-image" />
+              <use href="/assets/svg/sprite.svg#contact-image" />
             </svg>
           </div>
           <Input placeholder={'Name'} type={'text'} required name={'name'} className={'bg-transparent'} />

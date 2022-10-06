@@ -19,7 +19,7 @@ export default function about() {
   const slug = router.query.slug;
   return (
     <Layout title={'Games'}>
-      <Header title={'Word Jumble'} link={'Games'} image={'/images/wordjumble-header.jpeg'} />
+      <Header title={'Word Jumble'} link={'Games'} image={'/assets/assets/images/wordjumble-header.jpeg'} />
 
       <div className="my-[10.4rem]">
         <header>
@@ -73,37 +73,37 @@ export default function about() {
           >
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-deck.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-deck.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-deck-two.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-deck-two.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-five.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-five.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-one.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-one.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-two.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-two.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-three.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-three.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/images/card-four.png" alt="" />
+                <img className="h-[48rem]" src="/assets/assets/images/card-four.png" alt="" />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -123,7 +123,7 @@ export default function about() {
             <div className="flex items-center w-1/2 justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
-                  <use href="/images/sprite.svg#icon-check" />
+                  <use href="/assets/svg/sprite.svg#icon-check" />
                 </svg>
               </div>
               <h4 className="font-BenchNine">
@@ -135,7 +135,7 @@ export default function about() {
             <div className="flex items-center w-1/2 justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
-                  <use href="/images/sprite.svg#icon-check" />
+                  <use href="/assets/svg/sprite.svg#icon-check" />
                 </svg>
               </div>
               <h4 className="font-BenchNine">

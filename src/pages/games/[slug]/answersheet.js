@@ -64,7 +64,7 @@ export default function about() {
       <div className="h-[92vh] flex flex-col w-full justify-center px-[16rem] ">
         <div className="absolute left-0 top-[10.4rem] z-[-1000]  w-[100%] h-[100%]">
           <svg className="w-[100%] h-[100%] opacity-[.1]" preserveAspectRatio="none">
-            <use href="/images/sprite.svg#answer-sheet-bg" />
+            <use href="/assets/svg/sprite.svg#answer-sheet-bg" />
           </svg>
         </div>
         <div className="flex flex-col items-center justify-center mt-[-16rem] mb-[2.4rem]">

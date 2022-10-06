@@ -25,13 +25,13 @@ export default function Navbar() {
         >
           <a href="/">
             <svg className="navbar__logo">
-              <use href="/images/sprite.svg#logo-color" />
+              <use href="/assets/svg/sprite.svg#logo-color" />
             </svg>
           </a>
           <div onClick={toggle} className="flex items-center cursor-pointer md:hidden">
             <p className={open ? 'hidden' : `font-semibold text-[1.8rem] font-Nunito mr-[.8rem] md:hidden`}>Menu</p>
             <svg className="h-[2.4rem] w-[2.4rem] ">
-              <use href={open ? `/images/sprite.svg#icon-close` : `/images/sprite.svg#icon-menu`} />
+              <use href={open ? `/assets/svg/sprite.svg#icon-close` : `/assets/svg/sprite.svg#icon-menu`} />
             </svg>
           </div>
         </div>

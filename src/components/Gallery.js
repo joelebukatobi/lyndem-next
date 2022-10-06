@@ -10,7 +10,7 @@ export default () => {
   const swiperRef = useRef();
   return (
     <Container>
-      <div className="flex flex-col items-center justify-between gap-x-[4rem] my-[10.4rem]">
+      <div className="flex flex-col items-center justify-between gap-x-[4rem] mb-[16rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
           <h2 className="font-BenchNine">Our Gallery</h2>
           <hr className="w-[15%] bg-[#ff6300]" />
@@ -19,7 +19,7 @@ export default () => {
         <div className="w-full flex items-center">
           <button onClick={() => swiperRef.current.slidePrev()}>
             <svg className="h-[6.4rem] w-[6.4rem] hidden md:block">
-              <use href="/images/sprite.svg#icon-chevron-left" />
+              <use href="/assets/svg/sprite.svg#icon-chevron-left" />
             </svg>
           </button>
           <Swiper
@@ -62,7 +62,7 @@ export default () => {
           </Swiper>
           <button onClick={() => swiperRef.current.slideNext()}>
             <svg className="h-[6.4rem] w-[6.4rem] hidden md:block">
-              <use href="/images/sprite.svg#icon-chevron-right" />
+              <use href="/assets/svg/sprite.svg#icon-chevron-right" />
             </svg>
           </button>
         </div>

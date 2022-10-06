@@ -10,7 +10,7 @@ export default function Footer() {
       <Container className={'flex flex-col md:flex-row gap-x-[8rem]'}>
         <div className="bg-white w-[40%] border-t-[1.6rem] border-[#ff6300] p-[2.4rem]">
           <svg className="h-[16rem] w-[16rem]">
-            <use href="/images/sprite.svg#logo-color" />
+            <use href="/assets/svg/sprite.svg#logo-color" />
           </svg>
           <p className="font-Nunito">
             Lyndem Edutainment is an educational service provider that engenders learning through the art of interactive
@@ -18,13 +18,13 @@ export default function Footer() {
           </p>
           <div className="flex flex-row gap-x-[1.6rem] mt-[2.4rem]">
             <svg className="h-[2.4rem] w-[2.4rem]">
-              <use href="/images/sprite.svg#icon-in" />
+              <use href="/assets/svg/sprite.svg#icon-in" />
             </svg>
             <svg className="h-[2.4rem] w-[2.4rem]">
-              <use href="/images/sprite.svg#icon-fb" />
+              <use href="/assets/svg/sprite.svg#icon-fb" />
             </svg>
             <svg className="h-[2.4rem] w-[2.4rem]">
-              <use href="/images/sprite.svg#icon-tw" />
+              <use href="/assets/svg/sprite.svg#icon-tw" />
             </svg>
           </div>
         </div>
@@ -59,13 +59,13 @@ export default function Footer() {
                 <div className="flex gap-x-[2.4rem]">
                   <li className="flex items-center gap-x-[.8rem]">
                     <svg className="h-[1.6rem] w-[1.6rem]">
-                      <use href="/images/sprite.svg#icon-phone" />
+                      <use href="/assets/svg/sprite.svg#icon-phone" />
                     </svg>
                     08025182324
                   </li>
                   <li className="flex items-center gap-x-[.8rem]">
                     <svg className="h-[1.6rem] w-[1.6rem]">
-                      <use href="/images/sprite.svg#icon-phone" />
+                      <use href="/assets/svg/sprite.svg#icon-phone" />
                     </svg>
                     08094931619
                   </li>

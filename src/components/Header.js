@@ -5,16 +5,26 @@ import Container from '@/components/Container';
 
 export default function Header({ link, title, image }) {
   return (
-    <div className="header relative h-[48rem] w-full flex justify-center items-center mt-[1.6rem]">
-      <div className="header__image absolute z-[-1] top-0 left-0 bg-black/50 w-full h-full overflow-hidden">
-        <img src={image} alt="" />
+    <div className="header">
+      <div className="header__image">
+        <img
+          className="max-w-[270%] md:max-w-[unset] md:w-full ml-[-100%] md:ml-[unset]"
+          src={'/assets/images/page-banner.png'}
+          alt="page-banner"
+        />
       </div>
-      <Container>
-        <h4 className="text-center font-BenchNine text-white">{title}</h4>
-        <p className="text-center font-Nunito text-white">
-          <Link href="/">Home</Link> / <Link href={`/${link.toLowerCase()}`}>{link}</Link>
-        </p>
-      </Container>
+      <div className="absolute z-10">
+        <h2 className="text-center font-BenchNine text-white">{title}</h2>
+        <h4 className="text-center font-Nunito text-white">
+          <span className="hover:text-[#ff6300]">
+            <Link href="/">Home</Link>
+          </span>{' '}
+          ~{' '}
+          <span className="hover:text-[#ff6300]">
+            <Link href={`/${link.toLowerCase()}`}>{link}</Link>
+          </span>
+        </h4>
+      </div>
     </div>
   );
 }

@@ -6,10 +6,10 @@ export default function about() {
   return (
     <Layout title={'About '} link={'About'}>
       <div className="my-[10.4rem]">
-        <header>
+        {/* <header>
           <h2 className="font-BenchNine">About Us</h2>
           <hr className=" bg-[#ff6300]" />
-        </header>
+        </header> */}
         <p className="font-Nunito text-justify ">
           Lyndem Educational Games Cafe is a child-centred Cafe that engenders learning through the art of play. It is
           the brainchild of Mrs. Bassey Onwuanaku who wandered into and discovered the joy of board gaming in her search
@@ -36,14 +36,17 @@ export default function about() {
       {/* About Us */}
       <Section>
         <div className="md:hidden w-full flex flex-col items-center">
-          <h2 className="font-BenchNine">About Us</h2>
-          <hr className="w-1/4 bg-[#ff6300]" />
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            About Us
+          </h2>
         </div>
-        <div className="bg-black/50 w-1/2 h-[48rem] mb-[4rem] md:mb-[0]"></div>
+        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
+          <img className="W-full" src="/assets/images/about-image.jpg" alt="" />
+        </div>
         <div className="w-1/2">
           <div className="hidden md:block">
             <h2 className="font-BenchNine">About Us</h2>
-            <hr className="w-1/4 bg-[#ff6300]" />
+            <hr className="w-1/6 bg-[#ff6300]" />
           </div>
           <p className="font-Nunito ">
             Lyndem Edutainment is an interactive educational establishment where learning is engendered through the art
@@ -52,26 +55,26 @@ export default function about() {
             in a variety of topics.
           </p>
           <div className="flex flex-wrap mt-[2.4rem] gap-x-[2.4rem]">
-            <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
+            <div className="w-full md:w-[unset] flex items-center md:justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#ff6300] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
-                  <use href="/images/sprite.svg#icon-check" />
+                  <use href="/assets/svg/sprite.svg#icon-check" />
                 </svg>
               </div>
               <h4 className="font-BenchNine">EduGaming Cafe</h4>
             </div>
-            <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
+            <div className="w-full md:w-[unset] flex items-center md:justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#0202cb] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
-                  <use href="/images/sprite.svg#icon-check" />
+                  <use href="/assets/svg/sprite.svg#icon-check" />
                 </svg>
               </div>
               <h4 className="font-BenchNine">Game Schooling (School Visits)</h4>
             </div>
-            <div className="flex items-center justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
+            <div className="w-full md:w-[unset] flex items-center md:justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#b806cc] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
-                  <use href="/images/sprite.svg#icon-check" />
+                  <use href="/assets/svg/sprite.svg#icon-check" />
                 </svg>
               </div>
               <h4 className="font-BenchNine">Play Dates</h4>
@@ -83,13 +86,14 @@ export default function about() {
       {/* Our Mission */}
       <Section>
         <div className="md:hidden w-full flex flex-col items-center">
-          <h2 className="font-BenchNine">Our Mission</h2>
-          <hr className="w-1/4 bg-[#ff6300]" />
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            Our Mission
+          </h2>
         </div>
         <div className="w-1/2">
           <div className="hidden md:block">
             <h2 className="font-BenchNine">Our Mission</h2>
-            <hr className="w-1/4 bg-[#ff6300]" />
+            <hr className="w-1/5 bg-[#ff6300]" />
           </div>
           <p className="font-Nunito  md:w-[70%] mb-[4rem] md:mb-[0]">
             Edutainment is the synthesis of learning and fun. Our main purpose therefore is to infuse fun into the
@@ -100,7 +104,9 @@ export default function about() {
             </em>
           </p>
         </div>
-        <div className="bg-black/50 w-1/2 h-[48rem]"></div>
+        <div className="w-1/2 overflow-hidden">
+          <img className="w-full" src="/assets/images/mission-one.jpg" alt="" />
+        </div>
       </Section>
     </Layout>
   );

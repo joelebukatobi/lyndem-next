@@ -8,10 +8,13 @@ export default function about() {
       {/* About Us */}
       <Section>
         <div className="md:hidden w-full flex flex-col items-center">
-          <h2 className="font-BenchNine">Edugaming Cafe</h2>
-          <hr className="w-1/4 bg-[#ff6300]" />
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            Edugaming Cafe
+          </h2>
         </div>
-        <div className="bg-black/50 w-1/2 h-[48rem] mb-[4rem] md:mb-[0]"></div>
+        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
+          <img className="W-full" src="/assets/images/edugaming.jpeg" alt="" />
+        </div>
         <div className="w-1/2">
           <div className="hidden md:block">
             <h2 className="font-BenchNine">Edugaming Cafe</h2>
@@ -43,14 +46,19 @@ export default function about() {
           </p>
         </div>
       </Section>
-      {/* Game Schooling */}{' '}
-      <Section>
-        <div className="w-1/2">
-          <div className="flex flex-col items-center">
+      {/* Game Schooling */}
+      <Section className={''}>
+        <div className="md:hidden flex flex-col items-center">
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            Game Schooling
+          </h2>
+        </div>
+        <div className="w-1/2 order-2 md:order-1">
+          <div className="hidden md:flex flex-col">
             <h2 className="font-BenchNine">Game Schooling</h2>
             <hr className="w-1/4 bg-[#ff6300]" />
           </div>
-          <p className="font-Nunito mb-[4rem] md:mb-0 ">
+          <p className="font-Nunito mb-[4rem] md:mb-0">
             One of our services on offer is Game Schooling which simply put is the incorporation of games into school
             lessons. It is the intentional use of well thought out games to teach specific skills, rather than having
             the kids just play games haphazardly for entertainment.
@@ -63,19 +71,24 @@ export default function about() {
             interactive sessions
           </p>
         </div>
-        <div className="bg-black/50 w-1/2 h-[48rem]"></div>
+        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden order-1 md:order-2">
+          <img className="W-full" src="/assets/images/game-schooling-image.png" alt="" />
+        </div>
       </Section>
       {/* Play Dates */}
       <Section>
         <div className="md:hidden w-full flex flex-col items-center">
-          <h2 className="font-BenchNine">Play Dates</h2>
-          <hr className="w-1/4 bg-[#ff6300]" />
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            Play Dates
+          </h2>
         </div>
-        <div className="bg-black/50 w-1/2 h-[48rem] mb-[4rem] md:mb-[0]"></div>
+        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
+          <img className="W-full" src="/assets/images/image-fifteen.png" alt="" />
+        </div>
         <div className="w-1/2">
           <div className="hidden md:block">
             <h2 className="font-BenchNine">Play Dates</h2>
-            <hr className="w-1/4 bg-[#ff6300]" />
+            <hr className="w-1/6 bg-[#ff6300]" />
           </div>
           <p className="font-Nunito ">
             Play Dates are fun interaction opportunities where kids socialize with one another over educational games.

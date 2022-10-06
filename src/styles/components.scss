@@ -1,5 +1,5 @@
 hr {
-  @apply h-[.1rem] border-none bg-white/25 mb-[2.4rem];
+  @apply h-[.1rem] border-none bg-white/25 mb-[1rem];
 }
 
 table {
@@ -43,7 +43,7 @@ table {
 }
 
 .container {
-  @apply max-w-[120rem] px-[3.2rem] w-[100%]  mx-auto xl:px-[0] overflow-hidden;
+  @apply max-w-[136.6rem] px-[3.2rem] w-[100%]  mx-auto xl:px-[0] overflow-hidden;
 }
 
 .navbar {
@@ -75,7 +75,9 @@ table {
 }
 
 .header {
+  @apply relative flex items-center justify-center;
   &__image {
+    @apply h-[100%] h-[32rem] md:h-[unset] overflow-hidden;
     &::after {
       @apply h-[100%] w-[100%] absolute top-0 left-0  bg-[#010001]/70 z-10 content-[''];
     }

@@ -24,7 +24,7 @@ export default function Layout({ children, link, title, image, description, keyw
         <meta property="og:type" content="website" />
         <meta name="robots" content="index,follow" />
         <meta name="keywords" content={keywords} />
-        <link rel="shortcut icon" href="/images/favicon.png" />
+        <link rel="shortcut icon" href="/assets/images/favicon.png" />
       </Head>
       <Navbar />
       {router.pathname === '/' && <Hero />}
