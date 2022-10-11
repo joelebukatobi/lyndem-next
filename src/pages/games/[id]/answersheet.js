@@ -137,21 +137,6 @@ export default function about() {
                   </div>
                 </div>
                 <div className="flex gap-x-[1.6rem] items-center w-2/4">
-                  <p className="uppercase font-Domine font-bold text-[#458AD7] w-[10%]">b</p>
-                  <div className="relative flex items-center justify-center w-[90%]">
-                    <svg className="" viewBox="0 0 3296 956">
-                      <path
-                        d="M318.812 1.77482L4.16751 471.775C2.38829 474.432 4.29321 478 7.49149 478H3288.4C3291.62 478 3293.52 474.391 3291.7 471.737L2969.19 1.73681C2968.45 0.649698 2967.21 0 2965.89 0H322.136C320.801 0 319.554 0.665729 318.812 1.77482Z"
-                        fill="#225D9F"
-                      ></path>
-                      <path d="M2976 956L3296 478H0L328 956H2976Z" fill="#3F88D7"></path>
-                    </svg>
-                    <h3 className="absolute text-white font-Domine font-bold">{modal.answer[0].b}</h3>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-between mb-[2.4rem] gap-x-[2.4rem]">
-                <div className="flex gap-x-[1.6rem] items-center w-2/4">
                   <p className="uppercase font-Domine font-bold text-[#458AD7] w-[10%]">c</p>
                   <div className="relative flex items-center justify-center w-[90%]">
                     <svg className="" viewBox="0 0 3296 956">
@@ -162,6 +147,21 @@ export default function about() {
                       <path d="M2976 956L3296 478H0L328 956H2976Z" fill="#3F88D7"></path>
                     </svg>
                     <h3 className="absolute text-white font-Domine font-bold">{modal.answer[0].c}</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between mb-[2.4rem] gap-x-[2.4rem]">
+                <div className="flex gap-x-[1.6rem] items-center w-2/4">
+                  <p className="uppercase font-Domine font-bold text-[#458AD7] w-[10%]">b</p>
+                  <div className="relative flex items-center justify-center w-[90%]">
+                    <svg className="" viewBox="0 0 3296 956">
+                      <path
+                        d="M318.812 1.77482L4.16751 471.775C2.38829 474.432 4.29321 478 7.49149 478H3288.4C3291.62 478 3293.52 474.391 3291.7 471.737L2969.19 1.73681C2968.45 0.649698 2967.21 0 2965.89 0H322.136C320.801 0 319.554 0.665729 318.812 1.77482Z"
+                        fill="#225D9F"
+                      ></path>
+                      <path d="M2976 956L3296 478H0L328 956H2976Z" fill="#3F88D7"></path>
+                    </svg>
+                    <h3 className="absolute text-white font-Domine font-bold">{modal.answer[0].b}</h3>
                   </div>
                 </div>
                 <div className="flex gap-x-[1.6rem] items-center w-2/4">

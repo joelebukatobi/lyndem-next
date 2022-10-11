@@ -93,21 +93,21 @@ export default function Home() {
         </div>
         <div className="flex flex-col md:flex-row gap-x-[4rem] ">
           <div className="card">
-            <div className="h-[32rem] overflow-hidden">
+            <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-thirteen.jpg" alt="" />
             </div>
             <div className="p-[1.6rem]">
               <h4>Edugaming Cafe</h4>
               <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
               <p>
-                The Educational Games Cafe afford kids the opportunity to interact with board, card, and electronic
+                The Educational Games Cafe affords kids the opportunity to interact with board, card, and electronic
                 educational games and also like minded peers.
               </p>
             </div>
           </div>
 
           <div className="card">
-            <div className="h-[32rem] overflow-hidden">
+            <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-fourteen.jpeg" alt="" />
             </div>
             <div className="p-[1.6rem]">
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
 
           <div className="card">
-            <div className="h-[32rem] overflow-hidden">
+            <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-eleven.jpg" alt="" />
             </div>
             <div className="p-[1.6rem]">

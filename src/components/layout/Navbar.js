@@ -20,14 +20,16 @@ export default function Navbar() {
           className={
             open
               ? `flex w-full md:w-[unset] justify-between items-center h-[8rem] border-b-[.18rem]`
-              : `flex w-full md:w-[unset] justify-between items-center h-[8rem] `
+              : `flex w-full md:w-[unset] justify-between items-center h-[8rem]`
           }
         >
-          <a href="/">
-            <svg className="navbar__logo">
-              <use href="/assets/svg/sprite.svg#logo-color" />
-            </svg>
-          </a>
+          <div className=" md:w-[16rem]">
+            <a className="" href="/">
+              <svg className="navbar__logo">
+                <use href="/assets/svg/sprite.svg#logo-color" />
+              </svg>
+            </a>
+          </div>
           <div onClick={toggle} className="flex items-center cursor-pointer md:hidden">
             <p className={open ? 'hidden' : `font-semibold text-[1.8rem] font-Nunito mr-[.8rem] md:hidden`}>Menu</p>
             <svg className="h-[2.4rem] w-[2.4rem] ">
@@ -51,7 +53,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <Button className={'navbar__btn'} onClick={(e) => (e.preventDefault(), router.push('/contact'))}>
+        <Button className={'navbar__btn w-[16rem]'} onClick={(e) => (e.preventDefault(), router.push('/contact'))}>
           Contact Us
         </Button>
       </Container>

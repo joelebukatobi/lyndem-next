@@ -8,7 +8,7 @@ export default function Video() {
       </div>
 
       <Container>
-        <h1 className="font-BenchNine text-white text-[3.7rem] md:text-[7rem] font-bold">
+        <h1 className="font-BenchNine text-white text-[3.7rem] md:text-[7rem] xl:text-[9] font-bold">
           Games make learning a necessity to have fun. So there’s no better motivation for kids to learn than to teach
           the concept with a game
         </h1>
