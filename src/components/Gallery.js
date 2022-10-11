@@ -28,10 +28,10 @@ export default () => {
             slidesPerView="auto"
             navigation={{ clickable: true }}
             loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -42,7 +42,9 @@ export default () => {
             }}
           >
             <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
+              <div className="h-[32rem] overflow-hidden">
+                <img className="h-full" src="/assets/images/gallery/gallery-one.png" alt="" />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
