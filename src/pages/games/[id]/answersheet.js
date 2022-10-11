@@ -12,7 +12,6 @@ import Input from '@/components/elements/Input';
 import Button from '@/components/elements/Button';
 
 export default function about() {
-  // console.log(games);
   const [term, setTerm] = useState('');
   const [questions, setQuestions] = useState();
   const [modal, setModal] = useState();
@@ -29,14 +28,12 @@ export default function about() {
     });
 
     const data = await res.json();
-    console.log(data.data);
     if (data) {
       setQuestions(data);
     }
 
     if (data.data.length === 0) {
       setError('Please enter a question');
-      console.log(error);
     }
   };
 
@@ -49,7 +46,6 @@ export default function about() {
     });
 
     const data = await res.json();
-    console.log(res);
     if (data) {
       setModal(data.data);
     }

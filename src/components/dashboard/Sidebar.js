@@ -15,8 +15,6 @@ import AuthContext from '@/context/AuthContext';
 export default function Sidebar({ className }) {
   const pathname = useRouter().pathname;
   const { logout, user } = useContext(AuthContext);
-
-  console.log(user);
   return (
     <div className={`sidebar w-1/4 relative bg-black h-[100vh] text-white ${className}`}>
       {/* <div className="border-2 border-white h-full"> */}
@@ -258,11 +256,9 @@ export default function Sidebar({ className }) {
 
 export async function getServerSideProps() {
   const { user } = useContext(AuthContext);
-  console.log(user);
   const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/users/${user.data._id}`)]);
 
   const info = await Promise.all(res.map((res) => res.json()));
-  console.log(info[0]);
   return {
     props: {
       token,

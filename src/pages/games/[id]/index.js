@@ -16,7 +16,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function about({ game }) {
   const router = useRouter();
   const id = router.query.id;
-  console.log(game);
   return (
     <Layout title={game.name} link={'Games'}>
       <div className="my-[10.4rem]">
@@ -131,7 +130,6 @@ export async function getServerSideProps({ req }) {
   const url = req.url;
   const res = await Promise.all([fetch(`${API_URL}/backend/api/v1${url}`)]);
   const info = await Promise.all(res.map((res) => res.json()));
-  console.log(info[0]);
   return {
     props: {
       game: info[0].data,

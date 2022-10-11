@@ -46,7 +46,7 @@ export default function about({ games }) {
                 <div className="card cursor-pointer" key={game.id}>
                   <div className="bg-black/50 h-[32rem]"></div>
                   <div className="p-[1.6rem]">
-                    <h3 className="font-BenchNine">{game.name}</h3>
+                    <h3 className="font-BenchNine capitalize">{game.name}</h3>
                     <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
                     <p>{game.description}</p>
                     <p className="text-[#0202cb] hover:text-[#ff6300]">

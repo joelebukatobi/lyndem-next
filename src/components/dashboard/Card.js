@@ -1,5 +1,4 @@
 export default function Card({ games, reviews, questions }) {
-  console.log(games);
   return (
     <div className="w-[30%] bg-white h-[12rem] p-[2.4rem] flex items-center space-x-[1.6rem] rounded-[1rem]">
       <div className="h-[7.2rem] w-[7.2rem] bg-black rounded-[100%]"></div>

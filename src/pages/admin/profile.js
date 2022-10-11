@@ -64,8 +64,6 @@ export default function Profile({ token }) {
 
     const formData = new FormData();
     formData.append('files', photo);
-    console.log(formData);
-    console.log(photo);
     const res = await fetch(`${API_URL}/backend/api/v1/users/${user._id}/photo`, {
       method: 'PUT',
       headers: {
@@ -74,7 +72,6 @@ export default function Profile({ token }) {
       },
       body: formData,
     });
-    console.log(res);
 
     if (res.ok) {
       toast.success('Your profile has been updated');

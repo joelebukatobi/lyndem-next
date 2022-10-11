@@ -11,7 +11,6 @@ export default function Login() {
   const [errorMsg, setErrorMsg] = useState('');
 
   const { login, error } = useContext(AuthContext);
-  // console.log(error);
 
   const handleSubmit = (e) => {
     e.preventDefault();
