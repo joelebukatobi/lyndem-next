@@ -195,7 +195,7 @@ export default function List({ token, game }) {
           <form onSubmit={submitCreateQuestion}>
             <header className="mb-[1.6rem] flex justify-between ">
               <div className="">
-                <h4>Edit Question</h4>
+                <h4>Add Question</h4>
                 <h5>Please enter the details for the question below</h5>
               </div>
               <div className="">
@@ -211,7 +211,6 @@ export default function List({ token, game }) {
                 name={'question'}
                 type={'text'}
                 id={'question'}
-                value={question}
                 required={'required'}
                 onChange={(e) => setQuestion(e.target.value)}
                 className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
@@ -223,7 +222,6 @@ export default function List({ token, game }) {
                 name={'a'}
                 type={'text'}
                 id={'answer-a'}
-                value={answerA}
                 required={'required'}
                 onChange={(e) => setAnswerA(e.target.value)}
                 className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
@@ -233,7 +231,6 @@ export default function List({ token, game }) {
                 name={'b'}
                 type={'text'}
                 id={'answer-b'}
-                value={answerB}
                 required={'required'}
                 onChange={(e) => setAnswerB(e.target.value)}
                 className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
@@ -245,7 +242,6 @@ export default function List({ token, game }) {
                 name={'c'}
                 type={'text'}
                 id={'answer-c'}
-                value={answerC}
                 required={'required'}
                 onChange={(e) => setAnswerC(e.target.value)}
                 className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
@@ -255,7 +251,6 @@ export default function List({ token, game }) {
                 name={'d'}
                 type={'text'}
                 id={'answer-d'}
-                value={answerD}
                 required={'required'}
                 onChange={(e) => setAnswerD(e.target.value)}
                 className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
@@ -279,8 +274,8 @@ export default function List({ token, game }) {
           <form onSubmit={submitEditQuestion}>
             <header className="mb-[1.6rem] flex justify-between ">
               <div className="">
-                <h4>Add Question</h4>
-                <h5>Please enter the details for the question below</h5>
+                <h4>Edit Question</h4>
+                <h5>Please enter the details for the question you'd like to correct below</h5>
               </div>
               <div className="">
                 <h4 onClick={(e) => setEditQuestion(false)} className="text-red-600 cursor-pointer">

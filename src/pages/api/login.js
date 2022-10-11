@@ -24,7 +24,7 @@ export default async (req, res) => {
         'Set-Cookie',
         cookie.serialize('token', data.token, {
           httpOnly: true,
-          secure: false,
+          secure: true,
           maxAge: 60 * 60 * 24 * 7, // 1 week
           sameSite: 'strict',
           path: '/',
