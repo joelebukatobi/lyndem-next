@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 // Components
 import Container from '@/components/Container';
+import { carousel } from 'utils/carousel';
 // External Libraries
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,10 +29,10 @@ export default () => {
             slidesPerView="auto"
             navigation={{ clickable: true }}
             loop={true}
-            // autoplay={{
-            //   delay: 2500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -41,26 +42,13 @@ export default () => {
               1024: { slidesPerView: 3 },
             }}
           >
-            <SwiperSlide>
-              <div className="h-[32rem] overflow-hidden">
-                <img className="h-full" src="/assets/images/gallery/gallery-one.png" alt="" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="border-2 border-black/50 h-[32rem] w-full bg-black/50"></div>
-            </SwiperSlide>
+            {carousel.map(({ id, src }) => (
+              <SwiperSlide>
+                <div className="h-[32rem] overflow-hidden" key={id}>
+                  <img className="h-full" src={`${src}`} alt="" />
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
           <button onClick={() => swiperRef.current.slideNext()}>
             <svg className="h-[6.4rem] w-[6.4rem] hidden md:block">
