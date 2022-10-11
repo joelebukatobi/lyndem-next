@@ -51,7 +51,7 @@ export default function about({ games }) {
                     <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
                     <p>{game.description}</p>
                     <p className="text-[#0202cb] hover:text-[#ff6300]">
-                      <Link href={`/games/${game.slug}`}>View</Link>
+                      <Link href={`/games/${game.id}`}>View</Link>
                     </p>
                   </div>
                 </div>

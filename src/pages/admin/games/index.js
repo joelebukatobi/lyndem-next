@@ -198,7 +198,7 @@ export default function Games({ token, games }) {
                 name={'name'}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className={'w-[100%] placeholder:text-black/50'}
+                className={'w-[100%] placeholder:text-black/50 text-black'}
                 required={'required'}
                 placeholder={'Please input the name of the game'}
               />
@@ -210,7 +210,7 @@ export default function Games({ token, games }) {
                 name={'description'}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className={'w-[100%] placeholder:text-black/50'}
+                className={'w-[100%] placeholder:text-black/50 text-black'}
                 required={'required'}
                 placeholder={'Leave a game description in this text box'}
               />
@@ -254,7 +254,7 @@ export default function Games({ token, games }) {
                 name={'name'}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className={'w-[100%] placeholder:text-black'}
+                className={'w-[100%] placeholder:text-black/50 text-black'}
                 required={'required'}
               />
             </div>
@@ -265,7 +265,7 @@ export default function Games({ token, games }) {
                 name={'description'}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className={'w-[100%] placeholder:text-black'}
+                className={'w-[100%] placeholder:text-black/50 text-black'}
                 required={'required'}
               />
             </div>

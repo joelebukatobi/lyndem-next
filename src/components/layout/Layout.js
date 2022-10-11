@@ -28,9 +28,11 @@ export default function Layout({ children, link, title, image, description, keyw
       </Head>
       <Navbar />
       {router.pathname === '/' && <Hero />}
-      {(router.pathname === '/about' || router.pathname === '/services' || router.pathname === '/games') && (
-        <Header title={title} image={image} link={link} />
-      )}
+      {(router.pathname === '/about' ||
+        router.pathname === '/services' ||
+        router.pathname === '/games' ||
+        router.pathname.includes('games')) && <Header title={title} image={image} link={link} />}
+
       <Container>{children}</Container>
 
       {router.pathname === '/' && <Video />}

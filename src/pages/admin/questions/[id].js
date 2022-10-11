@@ -214,7 +214,7 @@ export default function List({ token, game }) {
                 value={question}
                 required={'required'}
                 onChange={(e) => setQuestion(e.target.value)}
-                className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Question'}
               />
             </div>
@@ -226,7 +226,7 @@ export default function List({ token, game }) {
                 value={answerA}
                 required={'required'}
                 onChange={(e) => setAnswerA(e.target.value)}
-                className={' w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option A'}
               />
               <Input
@@ -248,7 +248,7 @@ export default function List({ token, game }) {
                 value={answerC}
                 required={'required'}
                 onChange={(e) => setAnswerC(e.target.value)}
-                className={' w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option C'}
               />
               <Input
@@ -258,7 +258,7 @@ export default function List({ token, game }) {
                 value={answerD}
                 required={'required'}
                 onChange={(e) => setAnswerD(e.target.value)}
-                className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option D'}
               />
             </div>
@@ -298,7 +298,7 @@ export default function List({ token, game }) {
                 value={question}
                 required={'required'}
                 onChange={(e) => setQuestion(e.target.value)}
-                className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Question'}
               />
             </div>
@@ -310,7 +310,7 @@ export default function List({ token, game }) {
                 value={answerA}
                 required={'required'}
                 onChange={(e) => setAnswerA(e.target.value)}
-                className={' w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option A'}
               />
               <Input
@@ -320,7 +320,7 @@ export default function List({ token, game }) {
                 value={answerB}
                 required={'required'}
                 onChange={(e) => setAnswerB(e.target.value)}
-                className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option B'}
               />
             </div>
@@ -332,7 +332,7 @@ export default function List({ token, game }) {
                 value={answerC}
                 required={'required'}
                 onChange={(e) => setAnswerC(e.target.value)}
-                className={' w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={' w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option C'}
               />
               <Input
@@ -342,7 +342,7 @@ export default function List({ token, game }) {
                 value={answerD}
                 required={'required'}
                 onChange={(e) => setAnswerD(e.target.value)}
-                className={'w-full placeholder:text-black/50 placeholder:font-semibold'}
+                className={'w-full placeholder:text-black/50 text-black placeholder:font-semibold'}
                 placeholder={'Option D'}
               />
             </div>

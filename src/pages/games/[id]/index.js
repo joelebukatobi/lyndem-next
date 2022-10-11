@@ -14,39 +14,18 @@ import Header from '@/components/Header';
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-export default function about() {
+export default function about({ game }) {
   const router = useRouter();
-  const slug = router.query.slug;
+  const id = router.query.id;
+  console.log(game);
   return (
-    <Layout title={'Games'}>
-      <Header title={'Word Jumble'} link={'Games'} image={'/assets/assets/images/wordjumble-header.jpeg'} />
-
+    <Layout title={game.name} link={'Games'}>
       <div className="my-[10.4rem]">
-        <header>
-          <h2 className="font-BenchNine">Game Description</h2>
+        {/* <header>
+          <h2 className="font-BenchNine">{game.name}</h2>
           <hr className=" bg-[#ff6300]" />
-        </header>
-        <p className="font-Nunito text-justify ">
-          Lyndem Educational Games Cafe is a child-centred Cafe that engenders learning through the art of play. It is
-          the brainchild of Mrs. Bassey Onwuanaku who wandered into and discovered the joy of board gaming in her search
-          for ways to help her first child nurture her kinesthetic approach to learning.
-          <br />
-          <br />
-          The cafe was birthed in September 2013 as a result of her love for children and her desire to share her
-          passion of fun learning with kids in her locality. It started off small with the games accumulated from her
-          personal work with her first child, games being her go-to tool for learning The cafe employs the use of table
-          top games to introduce children to the world of fun-learning and gaming hence its motto 'learning made fun'.
-          <br />
-          <br />
-          The cafe was initially patronised by only friends and family but has gradually grown to become a fun learning
-          games cafe for kids in Abuja, Nigeria where its based as it is the first of its kind, specifically geared to
-          the interest of children. The cafe caters to kids between the ages of 4 and 16. The lockdown in 2020 yielded
-          an opportunity for growth as the owner became one of the recipients of the Indie Game Developers Network
-          (IGDN) Sponsorship which brought her in connection with fellow gamers internationally. This connection brought
-          a boost to the cafe as a wide collection of games were individually and collectively donated to foster the
-          edugaming culture in Nigeria. The cafe is located at Suite A6, Kabom Court, Plot 104 Gado Nasko Road, Kubwa,
-          Abuja.
-        </p>
+        </header> */}
+        <p className="font-Nunito text-justify ">{game.description}</p>
       </div>
 
       {/* About Us */}
@@ -73,32 +52,32 @@ export default function about() {
           >
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-deck.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-deck.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-deck-two.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-deck-two.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-five.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-five.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-one.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-one.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-two.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-two.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-three.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-three.png" alt="" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -139,7 +118,7 @@ export default function about() {
                 </svg>
               </div>
               <h4 className="font-BenchNine">
-                <Link href={`/games/${slug}/answersheet`}>Answer Sheet</Link>
+                <Link href={`/games/${id}/answersheet`}>Answer Sheet</Link>
               </h4>
             </div>
           </div>
@@ -149,13 +128,14 @@ export default function about() {
   );
 }
 
-// export async function getServerSideProps() {
-// const res = await Promise.all([fetch(`${API_URL}/backend/api/v1/games/${slug}`), fetch(`${API_URL}/backend/api/v1/questions`)]);
-// const info = await Promise.all(res.map((res) => res.json()));
-// console.log(info[0]);
-// return {
-//   props: {
-//     games: info[0],
-//   },
-// };
-// }
+export async function getServerSideProps({ req }) {
+  const url = req.url;
+  const res = await Promise.all([fetch(`${API_URL}/backend/api/v1${url}`)]);
+  const info = await Promise.all(res.map((res) => res.json()));
+  console.log(info[0]);
+  return {
+    props: {
+      game: info[0].data,
+    },
+  };
+}
