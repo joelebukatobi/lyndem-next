@@ -8,7 +8,6 @@ import { API_URL } from '@/config/index';
 // Components
 import Layout from '@/components/layout/Layout';
 import Section from '@/components/Section';
-import Header from '@/components/Header';
 
 // External Libraries
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
@@ -82,7 +81,7 @@ export default function about({ game }) {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img className="h-[48rem]" src="/assets/assets/images/card-four.png" alt="" />
+                <img className="h-[48rem]" src="/assets/images/card-four.png" alt="" />
               </div>
             </SwiperSlide>
           </Swiper>

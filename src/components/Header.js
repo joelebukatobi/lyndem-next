@@ -1,9 +1,7 @@
 // Next JS
 import Link from 'next/link';
-// Components
-import Container from '@/components/Container';
 
-export default function Header({ link, title, image }) {
+export default function Header({ link, title }) {
   return (
     <div className="header">
       <div className="header__image">

@@ -33,7 +33,6 @@ export default function about({ games }) {
           Abuja.
         </p>
       </div>
-
       {/* What We Do */}
       <div className="my-[10.4rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
@@ -43,7 +42,7 @@ export default function about({ games }) {
         <div className="flex flex-col md:flex-row gap-x-[4rem] ">
           {games.data.map((game) => {
             return (
-              <Link href="/games/wordjumble">
+              <Link href={`/games/${game.id}`}>
                 <div className="card cursor-pointer" key={game.id}>
                   <div className="bg-black/50 h-[32rem]"></div>
                   <div className="p-[1.6rem]">
