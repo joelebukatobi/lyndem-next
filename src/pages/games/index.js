@@ -44,7 +44,7 @@ export default function about({ games }) {
               <Link href={`/games/${game.id}`}>
                 <div className="card cursor-pointer" key={game.id}>
                   <div className="h-[32rem] overflow-hidden p-[1.6rem]">
-                    <img className="lg:h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
+                    <img className="h-full md:h-[auto] lg:h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
                   </div>
                   <div className="p-[1.6rem]">
                     <h3 className="font-BenchNine capitalize">{game.name}</h3>
