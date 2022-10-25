@@ -56,8 +56,8 @@ export default function Footer() {
                   Suite A6, Kabom Court, <br /> Plot 104 Gado Nasko Road (2/1) <br /> By Phase IV Bridge, Opposite Unity
                   Clinic. Kubwa, Abuja
                 </li>
-                <div className="flex gap-x-[2.4rem]">
-                  <li className="flex items-center gap-x-[.8rem]">
+                <div className="flex flex-wrap gap-x-[2.4rem]">
+                  <li className="flex items-center gap-x-[.8rem] md:mb-[1.6rem] mb-[0]">
                     <svg className="h-[1.6rem] w-[1.6rem]">
                       <use href="/assets/svg/sprite.svg#icon-phone" />
                     </svg>
@@ -80,7 +80,10 @@ export default function Footer() {
               <span className="text-[#ff6300]">© </span>Lyndem Edutainment. All Rights Reserved
             </p>
             <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
-              Designed and Developed by JetDev
+              Designed and Developed by{' '}
+              <strong className="text-[#ff6300]">
+                <a href="https://joelebukatobi.dev">JetDev</a>
+              </strong>
             </p>
           </div>
         </div>

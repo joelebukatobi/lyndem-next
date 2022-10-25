@@ -9,15 +9,22 @@ export default function Home() {
     <Layout>
       {/* About Us */}
       <Section>
-        <div className="md:hidden w-full flex flex-col items-center">
-          <h2 className="font-BenchNine">About Us</h2>
+        <div className="lg:hidden w-full flex flex-col items-center">
+          <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
+            About Us
+          </h2>
           <hr className="w-1/6 bg-[#ff6300]" />
         </div>
-        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
-          <img className="W-full" src="/assets/images/about-image.jpg" alt="" />
+        <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden">
+          <img
+            className="w
+          -full"
+            src="/assets/images/about-image.jpg"
+            alt=""
+          />
         </div>
         <div className="w-1/2">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <h2 className="font-BenchNine">About Us</h2>
             <hr className="w-1/6 bg-[#ff6300]" />
           </div>
@@ -28,7 +35,7 @@ export default function Home() {
             in a variety of topics.
           </p>
           <div className="flex flex-wrap mt-[2.4rem] gap-x-[2.4rem]">
-            <div className="w-full md:w-[unset] flex items-center md:justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
+            <div className="w-full lg:w-[unset] flex items-center lg:justify-center p-[1.6rem] shadow-[0_2px_4px_rgba(0,0,0,0.25)]  gap-x-[1.6rem] mb-[2.4rem]">
               <div className="flex items-center justify-center h-[4rem] w-[4rem] bg-[#ff6300] rounded-[100%]">
                 <svg className="h-[2.4rem] w-[2.4rem]">
                   <use href="/assets/svg/sprite.svg#icon-check" />
@@ -58,18 +65,18 @@ export default function Home() {
 
       {/* Our Mission */}
       <Section>
-        <div className="md:hidden w-full flex flex-col items-center">
+        <div className="lg:hidden w-full flex flex-col items-center">
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             Our Mission
           </h2>
-          <hr className="hidden md:block w-1/5 bg-[#ff6300]" />
+          <hr className="hidden lg:block w-1/5 bg-[#ff6300]" />
         </div>
-        <div className="w-1/2 order-3 md:order-2">
-          <div className="hidden md:block">
+        <div className="w-1/2 order-3 lg:order-2">
+          <div className="hidden lg:block">
             <h2 className="font-BenchNine">Our Mission</h2>
             <hr className="w-1/5 bg-[#ff6300]" />
           </div>
-          <p className="font-Nunito  md:w-[70%] mb-[4rem] md:mb-[0]">
+          <p className="font-Nunito  md:w-[100%] mb-[4rem] lg3:mb-[0]">
             Edutainment is the synthesis of learning and fun. Our main purpose therefore is to infuse fun into the
             learning process, thus making it an enjoyable experience for kids so they become eager learners hence our
             motto{' '}
@@ -86,12 +93,12 @@ export default function Home() {
       {/* What We Do */}
       <div className="my-[16rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
-          <h2 className="w-full border-2 border-[#ff6300] md:border-none py-[1.6rem] mb-[2.4rem] md:mb-[unset] font-BenchNine text-center">
+          <h2 className="w-full md:w-3/4 border-2 border-[#ff6300] lg:border-none py-[1.6rem] mb-[2.4rem] md:mb-[unset] font-BenchNine text-center">
             What We Do
           </h2>
-          <hr className="hidden md:block w-[10%] bg-[#ff6300]" />
+          <hr className="hidden lg:block w-[10%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col md:flex-row gap-x-[4rem] ">
+        <div className="flex flex-col items-center lg:flex-row gap-x-[4rem] ">
           <div className="card">
             <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-thirteen.jpg" alt="" />
@@ -105,7 +112,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
           <div className="card">
             <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-fourteen.jpeg" alt="" />
@@ -119,7 +125,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
           <div className="card">
             <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-eleven.jpg" alt="" />
@@ -139,16 +144,16 @@ export default function Home() {
 
       {/* Game Schooling  */}
       <Section>
-        <div className="md:hidden w-full flex flex-col items-center">
+        <div className="lg:hidden w-full flex flex-col items-center">
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             Game Schooling
           </h2>
         </div>
-        <div className="w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
+        <div className="w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden">
           <img src="/assets/images/game-schooling-image.png" alt="" />
         </div>
         <div className="w-1/2">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <h2 className="font-BenchNine">Game Schooling</h2>
             <hr className="w-1/4 bg-[#ff6300]" />
           </div>

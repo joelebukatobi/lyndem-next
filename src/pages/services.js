@@ -7,16 +7,16 @@ export default function about() {
     <Layout title={'Services'} link={'Services '}>
       {/* About Us */}
       <Section>
-        <div className="md:hidden w-full flex flex-col items-center">
+        <div className="lg:hidden w-full flex flex-col items-center">
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             Edugaming Cafe
           </h2>
         </div>
-        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
+        <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden">
           <img className="W-full" src="/assets/images/edugaming.jpeg" alt="" />
         </div>
         <div className="w-1/2">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <h2 className="font-BenchNine">Edugaming Cafe</h2>
             <hr className="w-1/4 bg-[#ff6300]" />
           </div>
@@ -48,13 +48,13 @@ export default function about() {
       </Section>
       {/* Game Schooling */}
       <Section className={''}>
-        <div className="md:hidden flex flex-col items-center">
+        <div className="lg:hidden flex flex-col items-center">
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             Game Schooling
           </h2>
         </div>
-        <div className="w-1/2 order-2 md:order-1">
-          <div className="hidden md:flex flex-col">
+        <div className="w-1/2 order-2 lg:order-1">
+          <div className="hidden lg:flex flex-col">
             <h2 className="font-BenchNine">Game Schooling</h2>
             <hr className="w-1/4 bg-[#ff6300]" />
           </div>
@@ -71,22 +71,22 @@ export default function about() {
             interactive sessions
           </p>
         </div>
-        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden order-1 md:order-2">
+        <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden order-1 lg:order-2">
           <img className="W-full" src="/assets/images/game-schooling-image.png" alt="" />
         </div>
       </Section>
       {/* Play Dates */}
       <Section>
-        <div className="md:hidden w-full flex flex-col items-center">
+        <div className="lg:hidden w-full flex flex-col items-center">
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             Play Dates
           </h2>
         </div>
-        <div className=" w-1/2 mb-[4rem] md:mb-[0] overflow-hidden">
-          <img className="W-full" src="/assets/images/image-fifteen.png" alt="" />
+        <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden">
+          <img className="w-full" src="/assets/images/image-fifteen.png" alt="" />
         </div>
         <div className="w-1/2">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <h2 className="font-BenchNine">Play Dates</h2>
             <hr className="w-1/6 bg-[#ff6300]" />
           </div>

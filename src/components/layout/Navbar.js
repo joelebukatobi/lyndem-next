@@ -53,7 +53,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <Button className={'navbar__btn w-[16rem]'} onClick={(e) => (e.preventDefault(), router.push('/contact'))}>
+        <Button className={'navbar__btn md:w-[16rem]'} onClick={(e) => (e.preventDefault(), router.push('/contact'))}>
           Contact Us
         </Button>
       </Container>

@@ -3,7 +3,6 @@ import { API_URL } from '@/config/index';
 
 // Components
 import Layout from '@/components/layout/Layout';
-import Section from '@/components/Section';
 import Link from 'next/link';
 
 export default function about({ games }) {
@@ -39,13 +38,13 @@ export default function about({ games }) {
           <h2 className="font-BenchNine">Games </h2>
           <hr className="w-[8%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col md:flex-row gap-x-[4rem] ">
+        <div className="flex flex-col items-center justify-center md:flex-row gap-x-[4rem] ">
           {games.data.map((game) => {
             return (
               <Link href={`/games/${game.id}`}>
                 <div className="card cursor-pointer" key={game.id}>
                   <div className="h-[32rem] overflow-hidden p-[1.6rem]">
-                    <img className="h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
+                    <img className="lg:h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
                   </div>
                   <div className="p-[1.6rem]">
                     <h3 className="font-BenchNine capitalize">{game.name}</h3>
