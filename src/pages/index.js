@@ -13,7 +13,7 @@ export default function Home() {
           <h2 className="w-full border-2 border-[#ff6300] py-[1.6rem] mb-[2.4rem] font-BenchNine text-center">
             About Us
           </h2>
-          <hr className="w-1/6 bg-[#ff6300]" />
+          <hr className="hidden md:block w-1/6 bg-[#ff6300]" />
         </div>
         <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden">
           <img

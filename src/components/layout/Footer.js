@@ -75,16 +75,18 @@ export default function Footer() {
           </div>
 
           <hr className="mt-[4rem]" />
-          <div className="text-center md:text-left mt-[4.8rem] mt:mb-[0]">
-            <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
-              <span className="text-[#ff6300]">© </span>Lyndem Edutainment. All Rights Reserved
-            </p>
-            <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
-              Designed and Developed by{' '}
-              <strong className="text-[#ff6300]">
-                <a href="https://joelebukatobi.dev">JetDev</a>
-              </strong>
-            </p>
+          <div className="h-[4rem] md:text-left mt-[4.8rem] mt:mb-[0]  relative">
+            <div className="absolute h-full w-full bottom-0 flex flex-col justify-center items-center md:items-start">
+              <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+                <span className="text-[#ff6300]">© </span>Lyndem Edutainment. All Rights Reserved
+              </p>
+              <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+                Designed and Developed by{' '}
+                <strong className="text-[#ff6300]">
+                  <a href="https://joelebukatobi.dev">JetDev</a>
+                </strong>
+              </p>
+            </div>
           </div>
         </div>
       </Container>

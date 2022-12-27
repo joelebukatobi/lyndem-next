@@ -7,7 +7,7 @@ export default function Hero() {
       <header className="relative h-full mt-[1.6rem]">
         <div className="w-full xl:h-[80rem] overflow-hidden">
           <img
-            className="max-w-[300%] md:w-full ml-[-70%] md:ml-[0] md:mt-[-16rem]"
+            className="max-w-[300%]  md:w-full md:ml-[0] md:mt-[-16rem]"
             src="/assets/images/header-image.jpg"
             alt=""
           />

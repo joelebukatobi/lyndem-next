@@ -14,7 +14,7 @@ export default function Navbar() {
     setOpen(!open);
   };
   return (
-    <nav className={open ? 'h-[100vh]' : 'navbar'}>
+    <nav className={open ? 'h-[100vh] fixed w-full z-[10000] top-0 bg-white' : 'navbar'}>
       <Container className={'relative flex md:items-center md:justify-between h-full'}>
         <div
           className={

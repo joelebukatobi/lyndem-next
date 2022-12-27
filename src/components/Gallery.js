@@ -11,7 +11,7 @@ export default () => {
   const swiperRef = useRef();
   return (
     <Container>
-      <div className="flex flex-col items-center justify-between gap-x-[4rem] mb-[16rem]">
+      <div className="flex flex-col items-center justify-between gap-x-[4rem] mt-[8rem] mb-[16rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
           <h2 className="font-BenchNine">Our Gallery</h2>
           <hr className="w-[15%] bg-[#ff6300]" />
@@ -38,14 +38,14 @@ export default () => {
             }}
             breakpoints={{
               320: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
+              768: { slidesPerView: 1 },
               1024: { slidesPerView: 3 },
             }}
           >
             {carousel.map(({ id, src }) => (
               <SwiperSlide>
-                <div className="h-[32rem] overflow-hidden" key={id}>
-                  <img className="h-full" src={`${src}`} alt="" />
+                <div className="lg:h-[32rem] w-full overflow-hidden" key={id}>
+                  <img className="lg:h-full" src={`${src}`} alt="" />
                 </div>
               </SwiperSlide>
             ))}
