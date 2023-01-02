@@ -98,7 +98,7 @@ export default function Home() {
           </h2>
           <hr className="hidden lg:block w-[10%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col items-center lg:flex-row gap-x-[4rem] ">
+        <div className="flex flex-col lg:flex-row gap-x-[4rem] ">
           <div className="card">
             <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-thirteen.jpg" alt="" />

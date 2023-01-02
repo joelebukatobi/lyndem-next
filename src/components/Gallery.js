@@ -25,7 +25,7 @@ export default () => {
           </button>
           <Swiper
             modules={[Navigation, Pagination, Autoplay, A11y]}
-            spaceBetween={50}
+            spaceBetween={30}
             slidesPerView="auto"
             navigation={{ clickable: true }}
             loop={true}
@@ -43,7 +43,7 @@ export default () => {
             }}
           >
             {carousel.map(({ id, src }) => (
-              <SwiperSlide>
+              <SwiperSlide key={id}>
                 <div className="lg:h-[32rem] w-full overflow-hidden" key={id}>
                   <img className="lg:h-full" src={`${src}`} alt="" />
                 </div>
