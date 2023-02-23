@@ -114,9 +114,9 @@ export default function about({ games }) {
                     <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
                     <p>
                       {game.description.substring(0, 150)}...
-                      <Link href={`/games/${game.id}`}>
-                        <span className="text-[#0202cb] hover:text-[#ff6300]"></span>Read More
-                      </Link>
+                      <span className="text-[#0202cb] hover:text-[#ff6300]">
+                        <Link href={`/games/${game.id}`}>Read More</Link>
+                      </span>
                     </p>
                   </div>
                 </div>
