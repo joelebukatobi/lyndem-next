@@ -97,7 +97,7 @@ export default function about({ games }) {
           <h2 className="font-BenchNine">Games </h2>
           <hr className="w-[8%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col items-center justify-center md:flex-row gap-x-[4rem] ">
+        <div className="flex flex-col justify-center md:flex-row gap-x-[4rem] ">
           {games.data.map((game) => {
             return (
               <Link href={`/games/${game.id}`}>
@@ -108,7 +108,26 @@ export default function about({ games }) {
                   <div className="p-[1.6rem]">
                     <h3 className="font-BenchNine capitalize">{game.name}</h3>
                     <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
-                    <p>{game.description}</p>
+                    <p>{game.description.substring(0, 100)}</p>
+                    <p className="text-[#0202cb] hover:text-[#ff6300]">
+                      <Link href={`/games/${game.id}`}>View</Link>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+          {games.data.map((game) => {
+            return (
+              <Link href={`/games/${game.id}`}>
+                <div className="card cursor-pointer" key={game.id}>
+                  <div className="h-[32rem] overflow-hidden p-[1.6rem]">
+                    <img className="h-full md:h-[auto] lg:h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
+                  </div>
+                  <div className="p-[1.6rem]">
+                    <h3 className="font-BenchNine capitalize">{game.name}</h3>
+                    <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
+                    <p>{game.description.substring(0, 100)}</p>
                     <p className="text-[#0202cb] hover:text-[#ff6300]">
                       <Link href={`/games/${game.id}`}>View</Link>
                     </p>
