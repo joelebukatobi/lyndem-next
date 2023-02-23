@@ -91,14 +91,14 @@ export default function Home() {
       </Section>
 
       {/* What We Do */}
-      <div className="my-[16rem]">
+      <div className="my-[8rem] md:my-[16rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
           <h2 className="w-full md:w-3/4 border-2 border-[#ff6300] lg:border-none py-[1.6rem] mb-[2.4rem] md:mb-[unset] font-BenchNine text-center">
             What We Do
           </h2>
           <hr className="hidden lg:block w-[10%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col lg:flex-row gap-x-[4rem] ">
+        <div className="w-full  items-center lg:items-stretch flex flex-col lg:flex-row lg:gap-x-[4rem] ">
           <div className="card">
             <div className="h-[32rem] overflow-hidden p-[1.6rem]">
               <img className="w-full" src="/assets/images/image-thirteen.jpg" alt="" />

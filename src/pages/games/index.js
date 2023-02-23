@@ -9,27 +9,86 @@ export default function about({ games }) {
   // const
   return (
     <Layout title={'Games'} link={'Games'}>
-      <div className="my-[10.4rem]">
-        <p className="font-Nunito text-justify ">
-          Lyndem Educational Games Cafe is a child-centred Cafe that engenders learning through the art of play. It is
-          the brainchild of Mrs. Bassey Onwuanaku who wandered into and discovered the joy of board gaming in her search
-          for ways to help her first child nurture her kinesthetic approach to learning.
-          <br />
-          <br />
-          The cafe was birthed in September 2013 as a result of her love for children and her desire to share her
-          passion of fun learning with kids in her locality. It started off small with the games accumulated from her
-          personal work with her first child, games being her go-to tool for learning The cafe employs the use of table
-          top games to introduce children to the world of fun-learning and gaming hence its motto 'learning made fun'.
-          <br />
-          <br />
-          The cafe was initially patronised by only friends and family but has gradually grown to become a fun learning
-          games cafe for kids in Abuja, Nigeria where its based as it is the first of its kind, specifically geared to
-          the interest of children. The cafe caters to kids between the ages of 4 and 16. The lockdown in 2020 yielded
-          an opportunity for growth as the owner became one of the recipients of the Indie Game Developers Network
-          (IGDN) Sponsorship which brought her in connection with fellow gamers internationally. This connection brought
-          a boost to the cafe as a wide collection of games were individually and collectively donated to foster the
-          edugaming culture in Nigeria. The cafe is located at Suite A6, Kabom Court, Plot 104 Gado Nasko Road, Kubwa,
-          Abuja.
+      <div className="my-[10.4rem] space-y-[2.4rem]">
+        <p className="font-Nunito text-justify">
+          Why Games? Games are a fun and engaging way to get kids to enjoy their learning experience. They are a fun
+          alternative method of presenting knowledge to children whether at home, school or here at the café. They are
+          an exciting platform through which kids can gain control of their learning and thus become self-motivated to
+          pick up new skills. As a learning tool, games do the following:
+        </p>
+        <p className="font-Nunito text-justify">
+          They are an exciting platform through which kids can gain control of their learning and thus become
+          self-motivated to pick up new skills. As a learning tool, games do the following:
+        </p>
+        <ul className="font-Nunito ml-[2.4rem]">
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Improve memory and cognitive skills.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Increase processing speed. Develop logic and reasoning.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Improve critical thinking.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Boost spatial reasoning.{' '}
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Improve verbal and communication skills.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Increase attention and concentration.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Teach problem-solving Develop confidence.
+          </li>
+          <li className="flex items-center gap-x-[.8rem]">
+            <div className="flex items-center justify-center h-[1.6rem] w-[1.6rem] bg-green-600 rounded-[100%]">
+              <svg className="h-[.8rem] w-[.8rem]">
+                <use href="/assets/svg/sprite.svg#icon-check" />
+              </svg>
+            </div>
+            Improve decision-making.
+          </li>
+        </ul>
+        <p className="font-Nunito text-justify">
+          Wouldn’t you want your child to experience all the above? Why not bring your kids over to the café and afford
+          them the opportunity to play their way to knowledge.
         </p>
       </div>
       {/* What We Do */}

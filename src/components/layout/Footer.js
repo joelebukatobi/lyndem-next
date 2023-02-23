@@ -29,12 +29,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-[60%] mt-[4rem] md:mt-[0]">
+        <div className="w-[60%] flex flex-col justify-between mt-[4rem] md:mt-[0]">
           <div className="flex flex-col md:flex-row">
             <div className="md:w-[50%]">
               <h4>Important Links</h4>
               <hr className="mt-[1.6rem] md:w-1/2" />
-              <ul className="flex flex-row md:flex-col mb-[4rem] md:mb-[0] gap-x-[3.2rem] md:gap-x-[0] md:mt-[1.6rem] md:space-y-[1rem]">
+              <ul className="flex flex-col mb-[4rem] md:mb-[0] mt-[1.6rem] space-y-[1rem]">
                 <li className="text-white">
                   <Link href="/about">About Us</Link>
                 </li>
@@ -74,13 +74,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <hr className="mt-[4rem]" />
-          <div className="h-[4rem] md:text-left mt-[4.8rem] mt:mb-[0]  relative">
-            <div className="absolute h-full w-full bottom-0 flex flex-col justify-center items-center md:items-start">
-              <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+          <div className="md:text-left  relative">
+            <hr className="mt-[4rem]" />
+            <div className="w-full mt-[4rem] md:mt-0 flex flex-col justify-center items-start">
+              <p className="text-white font-Nunito font-normal text-[1.6rem] md:text-[1.8rem]">
                 <span className="text-[#ff6300]">© </span>Lyndem Edutainment. All Rights Reserved
               </p>
-              <p className="text-white font-Nunito font-normal text-[1.4rem] md:text-[1.8rem]">
+              <p className="text-white font-Nunito font-normal text-[1.6rem] md:text-[1.8rem]">
                 Designed and Developed by{' '}
                 <strong className="text-[#ff6300]">
                   <a href="https://joelebukatobi.dev">JetDev</a>

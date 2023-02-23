@@ -31,7 +31,8 @@ export default function Layout({ children, link, title, image, description, keyw
       {(router.pathname === '/about' ||
         router.pathname === '/services' ||
         router.pathname === '/games' ||
-        router.pathname.includes('games')) && <Header title={title} image={image} link={link} />}
+        router.pathname.includes('games') ||
+        '/wordjumble/answersheet') && <Header title={title} image={image} link={link} />}
 
       <Container>{children}</Container>
 

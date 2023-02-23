@@ -11,7 +11,7 @@ export default () => {
   const swiperRef = useRef();
   return (
     <Container>
-      <div className="flex flex-col items-center justify-between gap-x-[4rem] mt-[8rem] mb-[16rem]">
+      <div className="flex flex-col items-center justify-between gap-x-[4rem] mt-[8rem] md:mt-0 mb-[16rem]">
         <div className="flex flex-col items-center justify-center mb-[2.4rem]">
           <h2 className="font-BenchNine">Our Gallery</h2>
           <hr className="w-[15%] bg-[#ff6300]" />
@@ -25,7 +25,7 @@ export default () => {
           </button>
           <Swiper
             modules={[Navigation, Pagination, Autoplay, A11y]}
-            spaceBetween={30}
+            spaceBetween={10}
             slidesPerView="auto"
             navigation={{ clickable: true }}
             loop={true}
@@ -44,7 +44,7 @@ export default () => {
           >
             {carousel.map(({ id, src }) => (
               <SwiperSlide key={id}>
-                <div className="lg:h-[32rem] w-full overflow-hidden" key={id}>
+                <div className="lg:h-[24rem] w-full overflow-hidden" key={id}>
                   <img className="lg:h-full" src={`${src}`} alt="" />
                 </div>
               </SwiperSlide>
