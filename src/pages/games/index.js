@@ -10,11 +10,15 @@ export default function about({ games }) {
   return (
     <Layout title={'Games'} link={'Games'}>
       <div className="my-[10.4rem] space-y-[2.4rem]">
+        <div className="flex flex-col items-center justify-center mb-[2.4rem]">
+          <h2 className="font-BenchNine">Why Games?</h2>
+          <hr className="w-[8%] bg-[#ff6300]" />
+        </div>
         <p className="font-Nunito text-justify">
-          Why Games? Games are a fun and engaging way to get kids to enjoy their learning experience. They are a fun
-          alternative method of presenting knowledge to children whether at home, school or here at the café. They are
-          an exciting platform through which kids can gain control of their learning and thus become self-motivated to
-          pick up new skills. As a learning tool, games do the following:
+          Games are a fun and engaging way to get kids to enjoy their learning experience. They are a fun alternative
+          method of presenting knowledge to children whether at home, school or here at the café. They are an exciting
+          platform through which kids can gain control of their learning and thus become self-motivated to pick up new
+          skills. As a learning tool, games do the following:
         </p>
         <p className="font-Nunito text-justify">
           They are an exciting platform through which kids can gain control of their learning and thus become
@@ -97,7 +101,7 @@ export default function about({ games }) {
           <h2 className="font-BenchNine">Games </h2>
           <hr className="w-[8%] bg-[#ff6300]" />
         </div>
-        <div className="flex flex-col justify-center md:flex-row gap-x-[4rem] ">
+        <div className="flex flex-col md:flex-row gap-x-[4rem] flex-wrap">
           {games.data.map((game) => {
             return (
               <Link href={`/games/${game.id}`}>
@@ -108,28 +112,11 @@ export default function about({ games }) {
                   <div className="p-[1.6rem]">
                     <h3 className="font-BenchNine capitalize">{game.name}</h3>
                     <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
-                    <p>{game.description.substring(0, 100)}</p>
-                    <p className="text-[#0202cb] hover:text-[#ff6300]">
-                      <Link href={`/games/${game.id}`}>View</Link>
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-          {games.data.map((game) => {
-            return (
-              <Link href={`/games/${game.id}`}>
-                <div className="card cursor-pointer" key={game.id}>
-                  <div className="h-[32rem] overflow-hidden p-[1.6rem]">
-                    <img className="h-full md:h-[auto] lg:h-full" src="/assets/images/wordjumble-header.jpeg" alt="" />
-                  </div>
-                  <div className="p-[1.6rem]">
-                    <h3 className="font-BenchNine capitalize">{game.name}</h3>
-                    <hr className="bg-black/10 mt-[.8rem] mb-[1.6rem]" />
-                    <p>{game.description.substring(0, 100)}</p>
-                    <p className="text-[#0202cb] hover:text-[#ff6300]">
-                      <Link href={`/games/${game.id}`}>View</Link>
+                    <p>
+                      {game.description.substring(0, 150)}...
+                      <Link href={`/games/${game.id}`}>
+                        <span className="text-[#0202cb] hover:text-[#ff6300]"></span>Read More
+                      </Link>
                     </p>
                   </div>
                 </div>
