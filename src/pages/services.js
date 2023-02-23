@@ -22,27 +22,27 @@ export default function about() {
           </div>
           <p className="font-Nunito ">
             The Educational Games Cafe affords kids the opportunity to interact with board, card, and electronic
-            educational games and also like minded peers. At the cafe the kids are guided by facilitators based on their
+            educational games and also like-minded peers. At the cafe the kids are guided by facilitators based on their
             interest and intellectual ability.
             <br />
             <br />
-            The Cafe is open for school visits from{' '}
+            The Cafe is open for school visits from
             <em>
               <strong>10am to 2pm,</strong>
-            </em>{' '}
-            Monday to Friday and for walk-in clients from{' '}
+            </em>
+            Monday to Friday and for walk-in clients from
             <em>
               <strong>4pm to 6pm</strong>
-            </em>{' '}
+            </em>
             on Fridays and Saturdays during the school term.
             <br />
             <br />
-            During the holidays, the Cafe runs on weekdays only, from{' '}
+            During the holidays, the Cafe runs on weekdays only, from
             <em>
-              <strong>11am to 5pm</strong>
+              <strong>12pm to 5pm</strong>
             </em>
-            . The hours are divided into 3 slots of 2 hours each. This affords parents the ability to schedule the hours
-            that work for them and their kids. Payment per slot is N500 per child.
+            . The cafe runs on sessions of 2 hours each. This affords parents the ability to schedule the hours that
+            work for them and their kids. Payment per session is N1000 per child.
           </p>
         </div>
       </Section>
@@ -64,11 +64,11 @@ export default function about() {
             the kids just play games haphazardly for entertainment.
             <br />
             <br />
-            The philosophy behind game schooling is that kids remember what they enjoy learning.
+            The philosophy behind game schooling is that kids remember best what they enjoy learning.
             <br />
             <br />
             At Lyndem Edutainment we are open to partnering with schools and organizations to host game based
-            interactive sessions
+            interactive sessions or full blown game days.
           </p>
         </div>
         <div className=" w-1/2 mb-[4rem] lg:mb-[0] overflow-hidden order-1 lg:order-2">
@@ -92,10 +92,10 @@ export default function about() {
           </div>
           <p className="font-Nunito ">
             Play Dates are fun interaction opportunities where kids socialize with one another over educational games.
-            They include birthdays, kids parties and funfairs
+            These include birthdays, kids parties and funfairs or school fairs.
             <br />
             <br />
-            Play Dates can be customized and scheduled to suite the clients taste and are not restricted to the cafe
+            Play Dates can be customized and scheduled to suite the client's taste and are not restricted to the cafe.
           </p>
         </div>
       </Section>

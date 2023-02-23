@@ -18,7 +18,7 @@ export default function about() {
           <br />
           The cafe was birthed in September 2013 as a result of her love for children and her desire to share her
           passion of fun learning with kids in her locality. It started off small with the games accumulated from her
-          personal work with her first child, games being her go-to tool for learning The cafe employs the use of table
+          personal work with her first child, games being her go-to tool for learning. The cafe employs the use of table
           top games to introduce children to the world of fun-learning and gaming hence its motto 'learning made fun'.
           <br />
           <br />
