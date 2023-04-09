@@ -14,7 +14,7 @@ import Navbar from '@/components/layout/Navbar';
 import Input from '@/components/elements/Input';
 import Button from '@/components/elements/Button';
 
-export default function about() {
+export default function AnswerSheet() {
   const [term, setTerm] = useState('');
   const [questions, setQuestions] = useState();
   const [modal, setModal] = useState();
@@ -205,7 +205,7 @@ export default function about() {
   );
 }
 
-Layout.defaultProps = {
+AnswerSheet.defaultProps = {
   title: 'Answerssheet',
   description:
     'Word Jumble | A fast-paced, fun, word game with a twist to it . A four player game of words and spelling. Be the first to recognize your assigned word and unscramble it using your letter tiles. The first in time with the correctly spelt words earns the card. A game that combines learning with so much fun and laughter.',
