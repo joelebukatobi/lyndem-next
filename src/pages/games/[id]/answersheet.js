@@ -14,7 +14,7 @@ import Navbar from '@/components/layout/Navbar';
 import Input from '@/components/elements/Input';
 import Button from '@/components/elements/Button';
 
-export default function AnswerSheet(title, keywords, description) {
+export default function AnswerSheet({ title, keywords, description }) {
   const [term, setTerm] = useState('');
   const [questions, setQuestions] = useState();
   const [modal, setModal] = useState();
