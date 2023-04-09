@@ -84,7 +84,7 @@ export default function about() {
               </svg>
             </Button>
 
-            <div className="h-[32rem] w-full bg-white absolute top-[9.6rem] overflow-y-scroll">
+            <div className="h-[32rem] w-full bg-white absolute top-[9.6rem] overflow-y-scroll pr-[1.6rem]">
               {questions &&
                 questions.data.map((data) => (
                   <div className="p-[1.6rem] border-[.16rem] shadow-[0_1px_2px_rgba(0,0,0,0.25)] gap-x-[1.6rem] mb-[1.6rem]">
