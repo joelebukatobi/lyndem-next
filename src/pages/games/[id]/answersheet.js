@@ -1,6 +1,9 @@
 // React JS
 import { useState } from 'react';
 
+// Next JS
+import Head from 'next/head';
+
 // Config
 import { API_URL } from '@/config/index';
 
@@ -53,6 +56,17 @@ export default function about() {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://xpathedge.com" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content={keywords} />
+        <link rel="shortcut icon" href="/assets/images/favicon.png" />
+      </Head>
       <Navbar />
       <Container>
         <div className=" flex flex-col w-full justify-center lg:px-[16rem] relative mb-[4rem] pt-[16rem] pb-[24rem]">
@@ -190,3 +204,10 @@ export default function about() {
     </>
   );
 }
+
+Layout.defaultProps = {
+  title: 'Answerssheet',
+  description:
+    'Word Jumble | A fast-paced, fun, word game with a twist to it . A four player game of words and spelling. Be the first to recognize your assigned word and unscramble it using your letter tiles. The first in time with the correctly spelt words earns the card. A game that combines learning with so much fun and laughter.',
+  keywords: '',
+};

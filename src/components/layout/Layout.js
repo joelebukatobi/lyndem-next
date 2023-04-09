@@ -20,7 +20,7 @@ export default function Layout({ children, link, title, image, description, keyw
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://xpathedge.com" />
+        <meta property="og:url" content="https://lyndemedutainment.com" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index,follow" />
         <meta name="keywords" content={keywords} />
@@ -46,6 +46,5 @@ Layout.defaultProps = {
   title: 'Lyndem Edutainment',
   description:
     'Tailor-made technological solutions, creative expressions, and flawless executions. Let’s disrupt the norm, together.',
-  keywords:
-    'web development, web design, software development, branding, identity branding, mobile app development, mobile app design, ui/ux design, IT consultancy,',
+  keywords: '',
 };
